@@ -25,7 +25,7 @@ class ResProject(models.Model):
     def write(self, vals):
         # Simpler to maintain and less risk with extending, than
         # computed field(s) in the formio.form object.
-        res = super(ResPartner, self).write(vals)
+        res = super(ResProject, self).write(vals)
         if self.sudo().formio_forms:
             form_vals = self._prepare_write_formio_form_vals(vals)
             if form_vals:
